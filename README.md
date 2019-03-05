@@ -32,7 +32,8 @@ manifest.json
 ## 使用
 ### 创建Module
 在module文件夹里创建Module文件夹，如：demo。接着在demo文件夹里创建module.js，event.js和view.js，
-这3个文件并不是必须的，根据情况添加。比如，该模块并不需要模板，所以view.js就可以不要。
+
+> 注：这3个文件并不是必须的，根据情况添加。比如，该模块并不需要模板，所以view.js就可以不要
 
 在module.js中添加如下代码：
 ```javascript
@@ -42,4 +43,24 @@ App.module.extend('demo', function() {
         // todo.
     };
 });
+```
+extend的第一个参数为模块名，如果加载了该模块，可以在module, event, view里直接使用`this.module.demo`调用。
+init方法为初始化方法，模块加载的时候即会执行。
+
+接着添加一个方法：
+```javascript
+App.module.extend('demo', function() {
+    //
+    this.init = function() {
+        // todo.
+    };
+    
+    this.hello = function() {
+        console.log('Module demo hello.');
+    };
+});
+```
+如下调用hello方法：
+```javascript
+this.module.demo.hello();
 ```
