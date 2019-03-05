@@ -23,7 +23,7 @@ CEF是一个简单的Chrome Extension开发脚手架，它有如下功能：
 
 
 ## 1.获取并初始化
-1. git@github.com:yuiitsu/CES.git
+1. git clone https://github.com/yuiitsu/CEF.git
 2. cd CES
 3. npm install
 
