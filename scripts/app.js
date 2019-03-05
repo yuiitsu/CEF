@@ -70,16 +70,20 @@ let App = {
          */
         init: function() {
             for (let i in this) {
-                if (this[i].hasOwnProperty('event')) {
-                    this['listen'](this[i]);
-                    App.log('[Event] '+ i +' is listening.');
+                if (this.hasOwnProperty(i)) {
+                    if (this[i].hasOwnProperty('event')) {
+                        this['listen'](this[i]);
+                        App.log('[Event] ' + i + ' is listening.');
+                    }
                 }
             }
         },
 
         listen: function(obj) {
             for (let i in obj.event) {
-                obj.event[i]();
+                if (obj.event.hasOwnProperty(i)) {
+                    obj.event[i]();
+                }
             }
         },
 
@@ -110,13 +114,13 @@ let App = {
 
         /**
          * 获取模板内容
-         * @param model
          * @param name
+         * @param method
          * @param data
          */
-        get_view: function(model, name, data) {
-            this.eval_view_func(model, name);
-            return this[model + '.' + name].init(data);
+        get_view: function(name, method, data) {
+            this.eval_view_func(name, method);
+            return this[name + '.' + method].init(data);
         },
 
         /**

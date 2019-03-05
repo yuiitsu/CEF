@@ -24,7 +24,6 @@ let excludes = {
         'dist'
     ],
     'mini': [
-        './scripts/lib/reader.js'
     ]
 };
 
