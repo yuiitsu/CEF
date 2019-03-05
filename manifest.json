@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "CEF - A simple Chrome Extension development framework",
+    "short_name": "CEF",
+    "version": "0.2.0",
+    "description":"A simple Chrome Extension development framework",
+    "homepage_url": "https://cef.colorgamer.com",
+    "author":"onlyfu",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+    "background": {
+        "scripts": [
+            "scripts/lib/jquery-1.11.0.min.js",
+            "scripts/model.js",
+            "scripts/app.js",
+            "scripts/module/background/module.js",
+            "scripts/run.js"
+        ]
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "scripts/lib/jquery-1.11.0.min.js",
+            "scripts/app.js",
+            "scripts/model.js",
+            "scripts/module/content/module.js",
+            "scripts/module/content/view.js",
+            "scripts/module/content/event.js",
+            "scripts/run.js"
+        ],
+        "css": [
+            "style/content.css"
+        ]
+    }],
+    "browser_action": {
+        "default_title": "CES"
+    },
+    "permissions": [
+        "tabs",
+        "cookies",
+        "contextMenus",
+        "fontSettings",
+        "http://*/*",
+        "https://*/*"
+    ]
+}

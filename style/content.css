@@ -1,0 +1,5 @@
+.ces-view-example{position: absolute;width:300px;height:150px;background-color:#fff;border:1px solid #ccc;
+    padding:10px;left:50%;top:50%;transform: translate(-50%, -50%);font-size:16px;
+    font-family: NotoSansCJKsc, PingFang SC, Microsoft YaHei, sans-serif;}
+.ces-view-example h1{border-bottom: 1px solid #ccc;padding-bottom:10px;margin-bottom: 10px;}
+
