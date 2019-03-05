@@ -1,10 +1,9 @@
 /**
- * Created by Yuiitsu on 2018/10/23.
+ * Created by onlyfu on 2019/03/05.
  */
 App.module.extend('background', function() {
     //
-    let self = this,
-        article_data = {};
+    let self = this;
 
     this.init = function() {
         // todo.

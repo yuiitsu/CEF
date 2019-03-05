@@ -1,5 +1,5 @@
 /**
- * Created by Yuiitsu on 2018/10/23.
+ * Created by onlyfu on 2019/03/05.
  */
 App.module.extend('content', function() {
     let self = this;
@@ -23,4 +23,3 @@ App.module.extend('content', function() {
         }
     };
 });
-

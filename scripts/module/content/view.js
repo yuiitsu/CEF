@@ -1,5 +1,5 @@
 /**
- * SpinXS Content View
+ * CES Content View
  */
 App.view.extend('content', function() {
 
