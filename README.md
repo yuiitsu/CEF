@@ -100,7 +100,7 @@ App.view.extend('demo', function() {
 ```
 同Module，extend第一个参数为view名称，hello方法返回一段html模板代码。view对象有3个方法，分别是：
 
-- get_view()
+- getView()
 - display()
 - append()
 
@@ -131,7 +131,7 @@ let html = this.view.getView('demo', 'hello', {name: 'CEF'});
 ```javascript
 function display(name, method, data, target) {}
 ```
-它们有4个参数，前3个同get_view，最后的target即为目录对象，因为本项目使用了jQuery，所以这里是jQuery对象
+它们有4个参数，前3个同getView，最后的target即为目录对象，因为本项目使用了jQuery，所以这里是jQuery对象
 调用：
 ```javascript
 this.view.display('demo', 'hello', {name: 'CEF'}, $('#xxx'));
@@ -159,7 +159,7 @@ this.view.display('demo', 'hello', {name: 'CEF'}, $('#xxx'));
 {{ end }}
 
 // 调用其它模板
-{{ var v = this.view.get_view(); }}
+{{ var v = this.view.getView(); }}
 
 // 渲染模板
 {{ v }}
