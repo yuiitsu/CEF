@@ -13,7 +13,7 @@ CEF是一个简单的Chrome Extension开发脚手架，它有如下功能：
 - [3. 使用](#3使用)
     - [3.1 创建Module](#31创建Module)
     - [3.2 创建View](#32创建View)
-        - [3.2.1 get_view()](#321get_view)
+        - [3.2.1 getView()](#321getView)
         - [3.2.2 display()和append()](#322display和append)
         - [3.2.3 模板语法](#323模板语法)
     - [3.3 创建Event](#33创建Event)
@@ -104,7 +104,7 @@ App.view.extend('demo', function() {
 - display()
 - append()
 
-#### 3.2.1get_view()
+#### 3.2.1getView()
 ```javascript
 function get_view(name, method, data) {}
 ```

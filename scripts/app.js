@@ -118,7 +118,7 @@ let App = {
          * @param method
          * @param data
          */
-        get_view: function(name, method, data) {
+        getView: function(name, method, data) {
             this.eval_view_func(name, method);
             return this[name + '.' + method].init(data);
         },
