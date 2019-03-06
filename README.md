@@ -106,7 +106,7 @@ App.view.extend('demo', function() {
 
 #### 3.2.1getView()
 ```javascript
-function get_view(name, method, data) {}
+function getView(name, method, data) {}
 ```
 它有3个参数：
 
@@ -116,7 +116,7 @@ function get_view(name, method, data) {}
 
 调用demo的hello方法：
 ```javascript
-let html = this.view.get_view('demo', 'hello', {name: 'CEF'});
+let html = this.view.getView('demo', 'hello', {name: 'CEF'});
 ```
 将会得到：
 ```html
